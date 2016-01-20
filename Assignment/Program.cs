@@ -8,6 +8,10 @@ namespace Assignment
 {
     class Program
     {
+        /// <summary>
+        /// Main entry of the application.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             try
@@ -43,14 +47,13 @@ namespace Assignment
                     {
                         //do nothing...
                     }
-                    //Print the result
                     Console.WriteLine("*******************************************************************************");
                 }
                 //End display menu
             }
             catch (Exception ex)
             {
-                Console.WriteLine("An unhandled error has been occured!");
+                Logger.Log(string.Format("Exception at Main {0} ST {1}", ex.Message, ex.StackTrace));
             }
         }
         

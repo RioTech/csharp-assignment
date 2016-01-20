@@ -47,7 +47,7 @@ namespace Assignment
         {
             bool isValidBST = IsValidBST(n2);
             Console.WriteLine(isValidBST);
-            Console.WriteLine("The given binary tree is " + (isValidBST ? "valid":"invalid") + " binary search tree");
+            Console.WriteLine("The given binary tree is " + (isValidBST ? "valid" : "invalid") + " binary search tree");
         }
         /// <summary>
         /// Check whether the given binary tree is a valid binary search tree or not.
@@ -58,15 +58,23 @@ namespace Assignment
         /// <returns>true/false</returns>
         private bool IsValidBST(Node node, int MIN = int.MinValue, int MAX = int.MaxValue)
         {
-            if (node == null)
-                return true;
-            if (node.Value > MIN
-                && node.Value < MAX
-                && IsValidBST(node.Left, MIN, node.Value)
-                && IsValidBST(node.Right, node.Value, MAX))
-                return true;
-            else
+            try
+            {
+                if (node == null)
+                    return true;
+                if (node.Value > MIN
+                    && node.Value < MAX
+                    && IsValidBST(node.Left, MIN, node.Value)
+                    && IsValidBST(node.Right, node.Value, MAX))
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(string.Format("Exception at BinarySearchTree.IsValidBST {0} ST {1}", ex.Message, ex.StackTrace));
                 return false;
+            }
         }
     }
 }

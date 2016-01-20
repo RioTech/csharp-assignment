@@ -8,6 +8,9 @@ namespace Assignment
 {
     class BugFix
     {
+        /// <summary>
+        /// Displays the question to the user
+        /// </summary>
         public static void DisplayQuestion()
         {
             Console.WriteLine("Identify a bug in the given program.\n");
@@ -23,7 +26,7 @@ namespace Assignment
             Console.ResetColor();
             Console.WriteLine("Press enter key to see the answer");
             Console.ReadLine();
-            Console.WriteLine("According to BODMAS rule, we have to enclose 'a + b' within brackets.\n");
+            Console.WriteLine("According to BODMAS rule, division operation will be done before adding a and b.  So, we have to enclose 'a + b' within brackets.\n");
         }
     }
 

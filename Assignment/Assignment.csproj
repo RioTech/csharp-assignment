@@ -44,6 +44,7 @@
     <Compile Include="BinarySearchTree.cs" />
     <Compile Include="BugFix.cs" />
     <Compile Include="ChangeDirectoryFunction.cs" />
+    <Compile Include="Helpers\Logger.cs" />
     <Compile Include="Helpers\Validator.cs" />
     <Compile Include="IndexOfLongestRun.cs" />
     <Compile Include="Program.cs" />
