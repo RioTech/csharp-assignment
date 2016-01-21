@@ -24,28 +24,24 @@ namespace Assignment
                     userOption = DisplayMenu();
                     if (userOption == 5)
                         return;
-
-                    //Take the action
-                    if (userOption == 1)
+                    switch (userOption)
                     {
-                        BugFix.DisplayQuestion();
-                    }
-                    else if (userOption == 2)
-                    {
-                        Path.ChangeDirectory();
-                    }
-                    else if (userOption == 3)
-                    {
-                        IndexOfLongestRun.FindIndexOfLongestRun();
-                    }
-                    else if (userOption == 4)
-                    {
-                        BinarySearchTree bst = new BinarySearchTree();
-                        bst.Check();
-                    }
-                    else
-                    {
-                        //do nothing...
+                        case 1:
+                            BugFix.DisplayQuestion();
+                            break;
+                        case 2:
+                            Path.ChangeDirectory();
+                            break;
+                        case 3:
+                            IndexOfLongestRun.FindIndexOfLongestRun();
+                            break;
+                        case 4:
+                            BinarySearchTree bst = new BinarySearchTree();
+                            bst.Check();
+                            break;
+                        default:
+                            //do nothing...
+                            break;
                     }
                     Console.WriteLine("*******************************************************************************");
                 }
@@ -53,6 +49,7 @@ namespace Assignment
             }
             catch (Exception ex)
             {
+                Console.WriteLine(string.Format("Exception at Main {0} ST {1}", ex.Message, ex.StackTrace));
                 Logger.Log(string.Format("Exception at Main {0} ST {1}", ex.Message, ex.StackTrace));
             }
         }

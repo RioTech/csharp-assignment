@@ -72,6 +72,7 @@ namespace Assignment
             }
             catch (Exception ex)
             {
+                Console.WriteLine(string.Format("Exception at BinarySearchTree.IsValidBST {0} ST {1}", ex.Message, ex.StackTrace));
                 Logger.Log(string.Format("Exception at BinarySearchTree.IsValidBST {0} ST {1}", ex.Message, ex.StackTrace));
                 return false;
             }

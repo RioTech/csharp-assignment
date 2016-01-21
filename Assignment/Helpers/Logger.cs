@@ -20,7 +20,6 @@ namespace Assignment
         {
             try
             {
-                Console.WriteLine(errorMessage);
                 string folderPath = AppDomain.CurrentDomain.BaseDirectory + "Logs";
                 string filePath = System.IO.Path.Combine(folderPath, "log " + DateTime.Now.ToString("MM-dd-yyyy") + ".log");
                 if (!Directory.Exists(folderPath))

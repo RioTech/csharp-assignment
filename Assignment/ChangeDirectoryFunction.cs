@@ -47,7 +47,8 @@ namespace Assignment
             }
             catch (Exception ex)
             {
-               Logger.Log(string.Format("Exception at Path.ChangeDirectory {0} ST {1}", ex.Message, ex.StackTrace));
+                Console.WriteLine(string.Format("Exception at Path.ChangeDirectory {0} ST {1}", ex.Message, ex.StackTrace));
+                Logger.Log(string.Format("Exception at Path.ChangeDirectory {0} ST {1}", ex.Message, ex.StackTrace));
             }
         }
         /// <summary>

@@ -30,6 +30,7 @@ namespace Assignment
             }
             catch (Exception ex)
             {
+                Console.WriteLine(string.Format("Exception at IndexOfLongestRun.FindIndexOfLongestRun {0} ST {1}", ex.Message, ex.StackTrace));
                 Logger.Log(string.Format("Exception at IndexOfLongestRun.FindIndexOfLongestRun {0} ST {1}", ex.Message, ex.StackTrace));
             }
         }
@@ -65,6 +66,7 @@ namespace Assignment
             }
             catch (Exception ex)
             {
+                Console.WriteLine(string.Format("Exception at IndexOfLongestRun.LongestSeq {0} ST {1}", ex.Message, ex.StackTrace));
                 Logger.Log(string.Format("Exception at IndexOfLongestRun.LongestSeq {0} ST {1}", ex.Message, ex.StackTrace));
             }
 
@@ -98,6 +100,7 @@ namespace Assignment
             }
             catch (Exception ex)
             {
+                Console.WriteLine(string.Format("Exception at IndexOfLongestRun.GetNthIndex {0} ST {1}", ex.Message, ex.StackTrace));
                 Logger.Log(string.Format("Exception at IndexOfLongestRun.GetNthIndex {0} ST {1}", ex.Message, ex.StackTrace));
             }
             return -1;
